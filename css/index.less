@@ -1,0 +1,237 @@
+@import url(base.less);
+@color:#328fe1;
+.cz-header{
+  height: 2rem;
+  background-color: @color;
+  text-align: center;
+  position: relative;
+  > h2{
+    color: #fff;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  > .back{
+    width: 1.025rem;
+    height: 0.925rem;
+    background:  url(../images/icons/back.png) 0 0 no-repeat;
+    position: absolute;
+    left: 0.5rem;
+    .center-y();
+    .bgz()
+  }
+}
+//轮播图
+.focus {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.focus .hd {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  text-align: center;
+}
+.focus .hd ul {
+  overflow: hidden;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  height: 5px;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.focus .hd ul li {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.focus .hd ul .on {
+  background: #FF4000;
+}
+.focus .bd {
+  position: relative;
+  z-index: 0;
+}
+.focus .bd li a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 取消链接高亮 */
+}
+//商品详情
+.cz-pro{
+  padding:0.575rem 0 0.575rem 0.25rem;
+  background: #fff;
+  height: 3.0rem;
+  border: 1px solid #ccc;
+  .left{
+    width: 2.975rem;
+    height: 2.975rem;
+    border: 1px solid #ccc;
+    padding: 5px;
+    .bz();
+    .fl();
+  }
+  .right{
+    margin-left: 3.725rem;
+    > h3{
+      font-size: 0.55rem;
+      font-weight: 400;
+    }
+    > p{
+      font-size: 0.45rem;
+      line-height: 1rem;
+      i{
+        color: @color;
+        font-size: 0.5rem;
+      }
+    }
+    > .btn-wrap{
+      .clearfix();
+      margin-top: 0.25rem;
+      > button{
+        width: 3.5rem;
+        height: 1.1rem;
+        background-color: @color;
+        border: none;
+        border: 1px solid @color;
+        font-family: 'microsoft yahei';
+        .fl();
+        font-size: 0.45rem;
+        color: #fff;
+        border-radius: 5px;
+      }
+      > button:first-child{
+        margin-right: 0.95rem;
+      }
+    }
+  }
+}
+//商品评价
+.cz-pj{
+  background-color: #fbfbfb;
+  padding:0.125rem 0.75rem;
+  border: 1px solid #ccc;
+  >ul li {
+    width: 12.0rem;
+    height: 1.375rem;
+    .bz();
+    line-height: 1.375rem;
+    border-bottom: 1px solid #ccc;
+    > span{
+      display: block;
+      font-size: 0.45rem;
+      .fl();
+    }
+    > span> .cz-num{
+      padding-left: 0.275rem ;
+      color: @color;
+    }
+    > span:nth-child(2){
+      margin-left: 3.825rem ;
+    }
+    > .cz-liner{
+      position: relative;
+    }
+    > .cz-liner:before{
+      content: '';
+      width: 1.4rem;
+      height: 2px;
+      background-color: @color;
+      left: 1.925rem ;
+      .center-y();
+    }
+    .cz-rate{
+      color: @color;
+      padding-left: 1rem;
+    }
+  }
+  >ul li:nth-last-child(1){
+    border-bottom: none;
+  }
+}
+
+//全部商品
+.cz-nav{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top:  0.475rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  font-size: 0.525rem;
+  > .left{
+    .fl();
+    .w50();
+    text-align: center;
+    border-right: 1px solid #ccc;
+    .bz();
+    i {
+      color: #ff7f5d;
+      padding-left: 0.3rem;
+    }
+  }
+  > .right{
+    .fr();
+    .w50();
+    text-align: center;
+  }
+}
+
+//首页推荐
+.cz-recommend {
+  margin-top: 0.475rem;
+  font-size: 0.525rem;
+  .cz-index{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 1.725rem;
+    background-color: #fff;
+    line-height: 1.725rem;
+    .clearfix();
+    .left {
+      .fl();
+      padding-left: 0.3rem;
+    }
+    .right {
+      .fr();
+      padding-right: 0.3rem;
+    }
+  }
+  .content {
+    padding: 0 0.2rem;
+    .clearfix();
+    .cloth1 {
+      .bz();
+      .fl();
+      width: 6.4rem;
+      height: 8.55rem;
+      border: 1px solid #c5c5c5;
+      padding: 0.05rem;
+      background-color: #fff;
+      margin-top: 0.3rem;
+      > .img-wrap{
+        padding-bottom: 2px;
+      }
+      > .txt {
+        border-top: 1px solid #ccc;
+        padding: 0 0.225rem;
+        .txt-1 {
+          margin-top: 0.125rem;
+          color: #ccc;
+          font-size: 0.4rem;
+          line-height: 0.6rem;
+        }
+        .txt-2{
+          color: #040404;
+          line-height: 1rem;
+        }
+      }
+    }
+    .cloth1:nth-child(2n+1){
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+//女装
+
